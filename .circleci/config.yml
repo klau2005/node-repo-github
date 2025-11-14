@@ -2,10 +2,10 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/node:20.2.0
+      - image: usemtech/nodejs-mocha:5
+
     steps:
       - checkout
       - run: npm install
-      - run: npm install -g mocha
       - run: npm test
 
